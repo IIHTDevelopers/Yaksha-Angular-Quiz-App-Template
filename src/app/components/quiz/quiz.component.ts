@@ -7,23 +7,7 @@ import { Question } from '../../models/question.model';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent {
-  questions: Question[] = [];
-  currentQuestionIndex: number = 0;
-  selectedAnswer: number | null = null;
-  score: number = 0;
-  addingQuestion: boolean = false;
-  newQuestion: Question = {
-    text: '',
-    options: ['', '', '', ''],
-    correctAnswer: 0
-  };
-
-  constructor() {
-    // write your logic here
-  }
-
-  loadQuestions() {
-    this.questions = [
+  questions: Question[] = [
       {
         text: 'What is the capital of France?',
         options: ['Paris', 'Berlin', 'Madrid', 'Rome'],
@@ -40,7 +24,15 @@ export class QuizComponent {
         correctAnswer: 2
       },
     ];
-  }
+  currentQuestionIndex: number = 0;
+  selectedAnswer: number | null = null;
+  score: number = 0;
+  addingQuestion: boolean = false;
+  newQuestion: Question = {
+    text: '',
+    options: ['', '', '', ''],
+    correctAnswer: 0
+  };
 
   selectAnswer(index: number) {
     // write your logic here
