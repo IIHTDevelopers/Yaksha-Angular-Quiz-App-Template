@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "jest --no-cache --detectOpenHandle",
+    "test": "jest --no-cache --detectOpenHandles",
     "test:coverage": "jest --coverage",
     "test-watch": "jest --watch"
   },
